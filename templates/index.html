@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatTravels - Explore India</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(160deg, #0a122a, #050510, #000000);
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.07);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .glass-nav a {
+            color: #d9e9ff;
+            margin: 0 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .glass-nav a:hover {
+            color: #00d5ff;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 130px 10% 80px;
+        }
+
+        /* ✅ Home hero with background image placeholder */
+        #home {
+            background: url('{{ url_for("static", filename="images/ind.jpeg") }}') no-repeat center center/cover;
+            border-bottom: 2px solid rgba(255,255,255,0.15);
+        }
+        #home .overlay {
+            background: rgba(0,0,0,0.55);
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+        #home .content {
+            position: relative;
+            z-index: 2;
+        }
+        #home .content h1 {
+            font-size: 150px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: url('{{ url_for("static", filename="images/home-hero.jpg") }}') no-repeat center;
+            background-size: cover;
+            -webkit-background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.7));
+        }
+        
+        /* Buttons */
+        .btn-main {
+            background: #00d9ff;
+            border: none;
+            font-weight: 700;
+            padding: 12px 32px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        .btn-main:hover {
+            transform: scale(1.08);
+            background: #00b6d9;
+        }
+
+        /* Fade animation */
+        .fade-up {
+            animation: fadeUp 1.4s ease-in-out;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .info-card {
+            background: rgba(255,255,255,0.07);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* ✅ About section image */
+        .about-img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 0 25px rgba(0,255,255,0.25);
+            transition: 0.3s;
+        }
+        .about-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Contact links */
+        .contact-links a {
+            color: #00d9ff;
+            text-decoration: none;
+            display: block;
+            margin: 6px 0;
+        }
+        .contact-links a:hover {
+            color: #80f7ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="glass-nav">
+    <div class="fw-bold fs-4 text-white">BharatTravels</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="{{ url_for('login') }}" class="btn btn-danger btn-sm px-3 ms-3">Login / Signup</a>
+    </div>
+</div>
+
+<!-- ✅ Home Section -->
+<section id="home" class="text-center fade-up position-relative">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1 class="fw-bold">Discover </h1>
+        <p class="lead mb-4">Find your next travel destination with ease.</p>
+        <a href="{{ url_for('login') }}" class="btn btn-main fs-5">Let's Explore</a>
+    </div>
+</section>
+
+<!-- ✅ About Section with Image -->
+<section id="about">
+    <h2 class="mb-4 text-center">About Us</h2>
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <div class="info-card">
+                <p>
+                    BharatTravels is a smart travel discovery platform designed to help you find 
+                    the best locations across India based on real preferences — weather, budget, 
+                    season, and more. No fake marketing, just simple curated suggestions.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/t2.jpg') }}" class="about-img" alt="India Travel">
+        </div>
+    </div>
+</section>
+
+<!-- ✅ Contact Section -->
+<section id="contact">
+    <h2 class="mb-4 text-center">Contact</h2>
+    <div class="info-card text-center">
+        <p>Email: support@bharattravels.in</p>
+        <p>Phone: +91 98765 43210</p>
+        <div class="contact-links">
+            <a href="#">🌐 Official Website</a>
+            <a href="#">📸 Instagram Page</a>
+            <a href="#">📘 Facebook Page</a>
+            <a href="#">🐦 Twitter (X)</a>
+            <a href="#">📍 Google Maps Office</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

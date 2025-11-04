@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | BharatTravels</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(135deg, #081427, #000000);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 320px;
+            padding: 28px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+            animation: popIn 0.7s ease-out;
+            z-index: 10;
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.9) translateY(25px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        input:focus {
+            box-shadow: 0 0 8px #ff3535;
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            background: red;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.25s ease-in-out;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #c50000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+        }
+
+        .toggle-text {
+            text-align: center;
+            margin-top: 12px;
+            cursor: pointer;
+            color: #00b7ff;
+            font-size: 14px;
+        }
+
+        .toggle-text:hover {
+            text-decoration: underline;
+        }
+
+        .hidden { display: none; }
+
+        /* ---------- ANIMATED TOURISM STRIP ---------- */
+        .skyline {
+            position: absolute;
+            bottom: 150px;
+            left: 0;
+            width: 200%;
+            height: 180px;
+            opacity: 0.35;
+            animation: slide 18s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .skyline svg path {
+            stroke: #00eaff;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 6px #00eaff);
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: draw 4s linear infinite;
+        }
+
+        @keyframes draw {
+            0% { stroke-dashoffset: 500; }
+            100% { stroke-dashoffset: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LOGIN FORM -->
+    <div class="container" id="loginBox">
+        <h2>Welcome Back</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <div class="toggle-text" onclick="showSignup()">Don't have an account? Sign up</div>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div class="container hidden" id="signupBox">
+        <h2>Create Account</h2>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button onclick="signup()">Create Account</button>
+        <div class="toggle-text" onclick="showLogin()">Already have an account? Login</div>
+    </div>
+
+    <!-- MOVING INDIA SKYLINE -->
+    <div class="skyline">
+        <svg viewBox="0 0 1400 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M50 180 L80 120 L110 180 M150 180 L150 100 L200 100 L200 180 M260 180 L260 90 L300 60 L340 90 L340 180 
+            M380 180 L380 130 L420 130 L420 180 M470 180 L470 70 L500 50 L530 70 L530 180 
+            M600 180 L600 80 L640 80 L640 180 
+            M700 180 L700 60 L750 60 L750 180 
+            M820 180 L820 120 L860 80 L900 120 L900 180 
+            M950 180 L950 100 L1000 100 L1000 180 
+            M1080 180 L1080 60 L1120 40 L1160 60 L1160 180 
+            M1240 180 L1240 110 L1300 110 L1300 180" />
+        </svg>
+    </div>
+
+<script>
+    function showSignup() {
+        document.getElementById("loginBox").classList.add("hidden");
+        document.getElementById("signupBox").classList.remove("hidden");
+    }
+
+    function showLogin() {
+        document.getElementById("signupBox").classList.add("hidden");
+        document.getElementById("loginBox").classList.remove("hidden");
+    }
+
+    function login() {
+        let email = document.getElementById("loginEmail").value;
+        let password = document.getElementById("loginPassword").value;
+        if (email && password) {
+            window.location.href = "/home";
+        } else {
+            alert("Please fill all fields");
+        }
+    }
+
+    function signup() {
+        let name = document.getElementById("signupName").value;
+        let email = document.getElementById("signupEmail").value;
+        let password = document.getElementById("signupPassword").value;
+        if (name && email && password) {
+            alert("Signup successful! You can now login.");
+            showLogin();
+        } else {
+            alert("Please fill all fields");
+        }
+    }
+</script>
+
+</body>
+</html>

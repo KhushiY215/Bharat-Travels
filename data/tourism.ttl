@@ -1,0 +1,1028 @@
+@prefix ex: <http://example.org/tourism#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#############################
+# Historical City - Jaipur
+#############################
+ex:Jaipur
+    rdf:type ex:HistoricalCity ;
+    ex:label "Jaipur" ;
+    ex:hasAttraction "Hawa Mahal" , "Amber Fort" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "3-5 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/jaipur.jpg" .
+
+#############################
+# Beach City - Goa
+#############################
+ex:Goa
+    rdf:type ex:BeachCity ;
+    ex:label "Goa" ;
+    ex:hasAttraction "Calangute Beach" , "Anjuna" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "3-7 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/goa.jpg" .
+
+#############################
+# Adventure City - Manali
+#############################
+ex:Manali
+    rdf:type ex:AdventureCity ;
+    ex:label "Manali" ;
+    ex:hasAttraction "Solang Valley" , "Rohtang Pass" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "3-5 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/manali.jpg" .
+
+#############################
+# Spiritual City - Varanasi
+#############################
+ex:Varanasi
+    rdf:type ex:SpiritualCity ;
+    ex:label "Varanasi" ;
+    ex:hasAttraction "Dashashwamedh Ghat" , "Kashi Vishwanath Temple" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "2-4 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/varanasi.jpg" .
+
+#############################
+# Nature City - Alleppey
+#############################
+ex:Alleppey
+    rdf:type ex:NatureCity ;
+    ex:label "Alleppey" ;
+    ex:hasAttraction "Backwaters" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "3-5 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/alleppey.jpg" .
+
+
+##############################################################################
+# Rajasthan (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Rajasthan)
+ex:Jaipur
+    rdf:type ex:HistoricalCity ;
+    ex:label "Jaipur" ;
+    ex:hasAttraction "Hawa Mahal", "Amber Fort" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "3-5 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/jaipur.jpg" .
+
+ex:Jaisalmer
+    rdf:type ex:HistoricalCity ;
+    ex:label "Jaisalmer" ;
+    ex:hasAttraction "Jaisalmer Fort", "Sam Sand Dunes" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/jaisalmer.jpg" .
+
+ex:Pushkar
+    rdf:type ex:SpiritualCity ;
+    ex:label "Pushkar" ;
+    ex:hasAttraction "Pushkar Lake", "Brahma Temple" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-3 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/pushkar.jpg" .
+
+# Summer (Rajasthan)
+ex:MountAbu
+    rdf:type ex:NatureCity ;
+    ex:label "Mount Abu" ;
+    ex:hasAttraction "Nakki Lake", "Dilwara Temples" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/mountabu.jpg" .
+
+ex:Udaipur
+    rdf:type ex:HistoricalCity ;
+    ex:label "Udaipur" ;
+    ex:hasAttraction "City Palace", "Lake Pichola" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/udaipur.jpg" .
+
+ex:Kumbhalgarh
+    rdf:type ex:HistoricalCity ;
+    ex:label "Kumbhalgarh" ;
+    ex:hasAttraction "Kumbhalgarh Fort", "Wildlife Sanctuary" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/kumbhalgarh.jpg" .
+
+# Monsoon (Rajasthan)
+ex:Bundi
+    rdf:type ex:HistoricalCity ;
+    ex:label "Bundi" ;
+    ex:hasAttraction "Taragarh Fort", "Stepwells" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/bundi.jpg" .
+
+ex:Alwar
+    rdf:type ex:HistoricalCity ;
+    ex:label "Alwar" ;
+    ex:hasAttraction "Bala Quila", "Sariska National Park" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-3 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/alwar.jpg" .
+
+ex:Neemrana
+    rdf:type ex:HistoricalCity ;
+    ex:label "Neemrana" ;
+    ex:hasAttraction "Neemrana Fort Palace", "Heritage Walks" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Medium" ;
+    ex:duration "1-2 days" ;
+    ex:state "Rajasthan" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/neemrana.jpg" .
+
+##############################################################################
+# Goa (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Goa)
+ex:NorthGoa
+    rdf:type ex:BeachCity ;
+    ex:label "North Goa" ;
+    ex:hasAttraction "Calangute Beach", "Baga Beach" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "3-7 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/northgoa.jpg" .
+
+ex:SouthGoa
+    rdf:type ex:BeachCity ;
+    ex:label "South Goa" ;
+    ex:hasAttraction "Palolem Beach", "Colva Beach" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "3-5 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/southgoa.jpg" .
+
+ex:OldGoa
+    rdf:type ex:HistoricalCity ;
+    ex:label "Old Goa" ;
+    ex:hasAttraction "Basilica of Bom Jesus", "Se Cathedral" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/oldgoa.jpg" .
+
+# Summer (Goa)
+ex:Anjuna
+    rdf:type ex:BeachCity ;
+    ex:label "Anjuna" ;
+    ex:hasAttraction "Anjuna Beach", "Flea Market" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/anjuna.jpg" .
+
+ex:Vagator
+    rdf:type ex:BeachCity ;
+    ex:label "Vagator" ;
+    ex:hasAttraction "Chapora Fort", "Vagator Beach" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/vagator.jpg" .
+
+ex:Mandrem
+    rdf:type ex:BeachCity ;
+    ex:label "Mandrem" ;
+    ex:hasAttraction "Mandrem Beach", "Wellness Retreats" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "2-3 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/mandrem.jpg" .
+
+# Monsoon (Goa)
+ex:Dudhsagar
+    rdf:type ex:NatureCity ;
+    ex:label "Dudhsagar Falls" ;
+    ex:hasAttraction "Dudhsagar Waterfall", "Railway Trek" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/dudhsagar.jpg" .
+
+ex:DivarIsland
+    rdf:type ex:NatureCity ;
+    ex:label "Divar Island" ;
+    ex:hasAttraction "Village Walks", "River Views" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Goa" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/divar.jpg" .
+
+ex:ChaporaValley
+    rdf:type ex:NatureCity ;
+    ex:label "Chapora Valley" ;
+    ex:hasAttraction "Scenic Views", "Hiking" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1 day" ;
+    ex:state "Goa" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/chapora.jpg" .
+
+##############################################################################
+# Himachal Pradesh (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Himachal)
+ex:Shimla
+    rdf:type ex:HistoricalCity ;
+    ex:label "Shimla" ;
+    ex:hasAttraction "Ridge", "Mall Road" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/shimla.jpg" .
+
+ex:Dharamshala
+    rdf:type ex:NatureCity ;
+    ex:label "Dharamshala" ;
+    ex:hasAttraction "McLeod Ganj", "Bhagsu Falls" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/dharamshala.jpg" .
+
+ex:SpitiValley
+    rdf:type ex:AdventureCity ;
+    ex:label "Spiti Valley" ;
+    ex:hasAttraction "Kaza", "High Mountain Passes" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "5-8 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.7"^^xsd:decimal ;
+    ex:image "images/spiti.jpg" .
+
+# Summer (Himachal)
+ex:Manali
+    rdf:type ex:AdventureCity ;
+    ex:label "Manali" ;
+    ex:hasAttraction "Solang Valley", "Rohtang Pass" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "3-5 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/manali.jpg" .
+
+ex:Kullu
+    rdf:type ex:AdventureCity ;
+    ex:label "Kullu" ;
+    ex:hasAttraction "River Rafting", "Great Himalayan National Park" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "2-3 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/kullu.jpg" .
+
+ex:Kasol
+    rdf:type ex:NatureCity ;
+    ex:label "Kasol" ;
+    ex:hasAttraction "Parvati Valley", "Trekking" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "2-4 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/kasol.jpg" .
+
+# Monsoon (Himachal)
+ex:Chamba
+    rdf:type ex:HistoricalCity ;
+    ex:label "Chamba" ;
+    ex:hasAttraction "Chamera Lake", "Bhuri Singh Museum" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-3 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/chamba.jpg" .
+
+ex:GreatHimalayanNP
+    rdf:type ex:NatureCity ;
+    ex:label "Great Himalayan National Park" ;
+    ex:hasAttraction "Biodiversity Trails", "Wildlife" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "2-5 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/ghnp.jpg" .
+
+ex:Kasauli
+    rdf:type ex:NatureCity ;
+    ex:label "Kasauli" ;
+    ex:hasAttraction "Sunset Point", "Nature Walks" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Himachal Pradesh" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/kasauli.jpg" .
+
+##############################################################################
+# Uttar Pradesh (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Uttar Pradesh)
+ex:Varanasi
+    rdf:type ex:SpiritualCity ;
+    ex:label "Varanasi" ;
+    ex:hasAttraction "Dashashwamedh Ghat", "Kashi Vishwanath Temple" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "2-4 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/varanasi.jpg" .
+
+ex:Agra
+    rdf:type ex:HistoricalCity ;
+    ex:label "Agra" ;
+    ex:hasAttraction "Taj Mahal", "Agra Fort" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/agra.jpg" .
+
+ex:Mathura
+    rdf:type ex:SpiritualCity ;
+    ex:label "Mathura" ;
+    ex:hasAttraction "Krishna Janmabhoomi", "Vishram Ghat" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/mathura.jpg" .
+
+# Summer (Uttar Pradesh)
+ex:Lucknow
+    rdf:type ex:HistoricalCity ;
+    ex:label "Lucknow" ;
+    ex:hasAttraction "Bara Imambara", "Rumi Darwaza" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/lucknow.jpg" .
+
+ex:Ayodhya
+    rdf:type ex:SpiritualCity ;
+    ex:label "Ayodhya" ;
+    ex:hasAttraction "Ram Janmabhoomi", "Saryu River" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/ayodhya.jpg" .
+
+ex:Kanpur
+    rdf:type ex:HistoricalCity ;
+    ex:label "Kanpur" ;
+    ex:hasAttraction "Allen Forest Zoo", "Moti Jheel" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "3.9"^^xsd:decimal ;
+    ex:image "images/kanpur.jpg" .
+
+# Monsoon (Uttar Pradesh)
+ex:Jhansi
+    rdf:type ex:HistoricalCity ;
+    ex:label "Jhansi" ;
+    ex:hasAttraction "Jhansi Fort", "Rani Mahal" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "3.9"^^xsd:decimal ;
+    ex:image "images/jhansi.jpg" .
+
+ex:Lucknow_Gardens
+    rdf:type ex:NatureCity ;
+    ex:label "Awadhi Gardens" ;
+    ex:hasAttraction "Barabanki Gardens", "Local Parks" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1 day" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "3.8"^^xsd:decimal ;
+    ex:image "images/awadhgardens.jpg" .
+
+ex:Shahjahanpur
+    rdf:type ex:HistoricalCity ;
+    ex:label "Shahjahanpur" ;
+    ex:hasAttraction "Local Heritage Sites", "Museums" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Uttar Pradesh" ;
+    ex:rating "3.7"^^xsd:decimal ;
+    ex:image "images/shahjahanpur.jpg" .
+
+##############################################################################
+# Kerala (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Kerala)
+ex:Alleppey
+    rdf:type ex:NatureCity ;
+    ex:label "Alleppey" ;
+    ex:hasAttraction "Backwaters", "Houseboat Cruises" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "3-5 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/alleppey.jpg" .
+
+ex:Munnar
+    rdf:type ex:NatureCity ;
+    ex:label "Munnar" ;
+    ex:hasAttraction "Tea Gardens", "Eravikulam National Park" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/munnar.jpg" .
+
+ex:Kovalam
+    rdf:type ex:BeachCity ;
+    ex:label "Kovalam" ;
+    ex:hasAttraction "Lighthouse Beach", "Relaxation" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/kovalam.jpg" .
+
+# Summer (Kerala)
+ex:Thekkady
+    rdf:type ex:NatureCity ;
+    ex:label "Thekkady" ;
+    ex:hasAttraction "Periyar Wildlife Sanctuary", "Boat Rides" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/thekkady.jpg" .
+
+ex:Vagamon
+    rdf:type ex:NatureCity ;
+    ex:label "Vagamon" ;
+    ex:hasAttraction "Meadows", "Trekking" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1-3 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/vagamon.jpg" .
+
+ex:Kumarakom
+    rdf:type ex:NatureCity ;
+    ex:label "Kumarakom" ;
+    ex:hasAttraction "Bird Sanctuary", "Backwater Stays" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/kumarakom.jpg" .
+
+# Monsoon (Kerala)
+ex:Athirappilly
+    rdf:type ex:NatureCity ;
+    ex:label "Athirappilly" ;
+    ex:hasAttraction "Athirappilly Falls", "Rainforest Walks" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/athirappilly.jpg" .
+
+ex:Wayanad
+    rdf:type ex:NatureCity ;
+    ex:label "Wayanad" ;
+    ex:hasAttraction "Edakkal Caves", "Tea Estates" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "2-4 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/wayanad.jpg" .
+
+ex:Periyar
+    rdf:type ex:NatureCity ;
+    ex:label "Periyar" ;
+    ex:hasAttraction "Periyar Lake", "Nature Safaris" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Kerala" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/periyar.jpg" .
+
+##############################################################################
+# Karnataka (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Karnataka)
+ex:Hampi
+    rdf:type ex:HistoricalCity ;
+    ex:label "Hampi" ;
+    ex:hasAttraction "Vijaya Vittala Temple", "Virupaksha Temple" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "2-3 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.7"^^xsd:decimal ;
+    ex:image "images/hampi.jpg" .
+
+ex:Mysore
+    rdf:type ex:HistoricalCity ;
+    ex:label "Mysore" ;
+    ex:hasAttraction "Mysore Palace", "Brindavan Gardens" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "1-3 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/mysore.jpg" .
+
+ex:Coorg
+    rdf:type ex:NatureCity ;
+    ex:label "Coorg" ;
+    ex:hasAttraction "Coffee Plantations", "Abbey Falls" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/coorg.jpg" .
+
+# Summer (Karnataka)
+ex:Chikmagalur
+    rdf:type ex:NatureCity ;
+    ex:label "Chikmagalur" ;
+    ex:hasAttraction "Coffee Hills", "Trekking Trails" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "2-3 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/chikmagalur.jpg" .
+
+ex:Kabini
+    rdf:type ex:NatureCity ;
+    ex:label "Kabini" ;
+    ex:hasAttraction "Wildlife Safaris", "River Cruises" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/kabini.jpg" .
+
+ex:JogFalls
+    rdf:type ex:NatureCity ;
+    ex:label "Jog Falls" ;
+    ex:hasAttraction "Waterfall Viewing", "Short Treks" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/jogfalls.jpg" .
+
+# Monsoon (Karnataka)
+ex:Gokarna
+    rdf:type ex:BeachCity ;
+    ex:label "Gokarna" ;
+    ex:hasAttraction "Om Beach", "Kudle Beach" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "2-4 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/gokarna.jpg" .
+
+ex:Agumbe
+    rdf:type ex:NatureCity ;
+    ex:label "Agumbe" ;
+    ex:hasAttraction "Rainforests", "Sunset Viewpoint" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/agumbe.jpg" .
+
+ex:Kodachadri
+    rdf:type ex:NatureCity ;
+    ex:label "Kodachadri" ;
+    ex:hasAttraction "Trekking", "Scenic Ridges" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Karnataka" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/kodachadri.jpg" .
+
+##############################################################################
+# Puducherry (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Puducherry)
+ex:Puducherry_Town
+    rdf:type ex:BeachCity ;
+    ex:label "Puducherry" ;
+    ex:hasAttraction "Promenade", "French Quarter" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-3 days" ;
+    ex:state "Puducherry" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/puducherry.jpg" .
+
+ex:Auroville
+    rdf:type ex:SpiritualCity ;
+    ex:label "Auroville" ;
+    ex:hasAttraction "Matri Mandir", "Auroville Beach" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Puducherry" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/auroville.jpg" .
+
+ex:SerenityBeach
+    rdf:type ex:BeachCity ;
+    ex:label "Serenity Beach" ;
+    ex:hasAttraction "Surfing", "Beach Walks" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Puducherry" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/serenitybeach.jpg" .
+
+# Summer (Puducherry)
+ex:ParadiseBeach
+    rdf:type ex:BeachCity ;
+    ex:label "Paradise Beach" ;
+    ex:hasAttraction "Boat Ride", "Sandy Cove" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1 day" ;
+    ex:state "Puducherry" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/paradisebeach.jpg" .
+
+ex:Chunnambar
+    rdf:type ex:NatureCity ;
+    ex:label "Chunnambar Backwater" ;
+    ex:hasAttraction "Backwater Boating", "Birdwatching" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Puducherry" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/chunnambar.jpg" .
+
+ex:Ousteri
+    rdf:type ex:NatureCity ;
+    ex:label "Ousteri Lake" ;
+    ex:hasAttraction "Bird Sanctuary", "Boating" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1 day" ;
+    ex:state "Puducherry" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/ousteri.jpg" .
+
+# Monsoon (Puducherry)
+ex:Veerampattinam
+    rdf:type ex:BeachCity ;
+    ex:label "Veerampattinam Beach" ;
+    ex:hasAttraction "Fishing Village", "Local Life" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1 day" ;
+    ex:state "Puducherry" ;
+    ex:rating "3.9"^^xsd:decimal ;
+    ex:image "images/veerampattinam.jpg" .
+
+ex:VillupuramHills
+    rdf:type ex:NatureCity ;
+    ex:label "Villupuram Hills" ;
+    ex:hasAttraction "Scenic Walks", "Small Waterfalls" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Puducherry" ;
+    ex:rating "3.8"^^xsd:decimal ;
+    ex:image "images/villupuramhills.jpg" .
+
+ex:Bahour
+    rdf:type ex:HistoricalCity ;
+    ex:label "Bahour" ;
+    ex:hasAttraction "Heritage Sites", "Local Markets" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1 day" ;
+    ex:state "Puducherry" ;
+    ex:rating "3.7"^^xsd:decimal ;
+    ex:image "images/bahour.jpg" .
+
+##############################################################################
+# Uttarakhand (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Uttarakhand)
+ex:Dehradun
+    rdf:type ex:HistoricalCity ;
+    ex:label "Dehradun" ;
+    ex:hasAttraction "Robber's Cave", "Forest Research Institute" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-3 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/dehradun.jpg" .
+
+ex:Nainital
+    rdf:type ex:NatureCity ;
+    ex:label "Nainital" ;
+    ex:hasAttraction "Naini Lake", "Snow Viewpoint" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/nainital.jpg" .
+
+ex:Auli
+    rdf:type ex:AdventureCity ;
+    ex:label "Auli" ;
+    ex:hasAttraction "Skiing", "Gondola Ride" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/auli.jpg" .
+
+# Summer (Uttarakhand)
+ex:Rishikesh
+    rdf:type ex:AdventureCity ;
+    ex:label "Rishikesh" ;
+    ex:hasAttraction "River Rafting", "Yoga Ashrams" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "2-4 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/rishikesh.jpg" .
+
+ex:Mussoorie
+    rdf:type ex:NatureCity ;
+    ex:label "Mussoorie" ;
+    ex:hasAttraction "Kempty Falls", "Mall Road" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/mussoorie.jpg" .
+
+ex:JimCorbett
+    rdf:type ex:NatureCity ;
+    ex:label "Jim Corbett National Park" ;
+    ex:hasAttraction "Safaris", "Birdwatching" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.5"^^xsd:decimal ;
+    ex:image "images/corbett.jpg" .
+
+# Monsoon (Uttarakhand)
+ex:ValleyOfFlowers
+    rdf:type ex:NatureCity ;
+    ex:label "Valley of Flowers" ;
+    ex:hasAttraction "Alpine Flowers", "Trekking" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "3-5 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.7"^^xsd:decimal ;
+    ex:image "images/valleyofflowers.jpg" .
+
+ex:Kedarnath
+    rdf:type ex:SpiritualCity ;
+    ex:label "Kedarnath" ;
+    ex:hasAttraction "Kedarnath Temple", "Pilgrimage Trek" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "3-5 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.6"^^xsd:decimal ;
+    ex:image "images/kedarnath.jpg" .
+
+ex:Bhimtal
+    rdf:type ex:NatureCity ;
+    ex:label "Bhimtal" ;
+    ex:hasAttraction "Bhimtal Lake", "Boating" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Uttarakhand" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/bhimtal.jpg" .
+
+##############################################################################
+# Andhra Pradesh (Winter / Summer / Monsoon) - 9 entries
+##############################################################################
+
+# Winter (Andhra Pradesh)
+ex:Tirupati
+    rdf:type ex:SpiritualCity ;
+    ex:label "Tirupati" ;
+    ex:hasAttraction "Tirumala Temple", "Alamelu Mangapuram" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "4.8"^^xsd:decimal ;
+    ex:image "images/tirupati.jpg" .
+
+ex:Vijayawada
+    rdf:type ex:HistoricalCity ;
+    ex:label "Vijayawada" ;
+    ex:hasAttraction "Kanaka Durga Temple", "Bhavani Island" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/vijayawada.jpg" .
+
+ex:ArakuValley
+    rdf:type ex:NatureCity ;
+    ex:label "Araku Valley" ;
+    ex:hasAttraction "Coffee Plantations", "Tribal Museum" ;
+    ex:bestSeason "Winter" ;
+    ex:budget "Medium" ;
+    ex:duration "2-3 days" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "4.4"^^xsd:decimal ;
+    ex:image "images/araku.jpg" .
+
+# Summer (Andhra Pradesh)
+ex:Visakhapatnam
+    rdf:type ex:BeachCity ;
+    ex:label "Visakhapatnam" ;
+    ex:hasAttraction "RK Beach", "Kailasagiri" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Medium" ;
+    ex:duration "2-4 days" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "4.3"^^xsd:decimal ;
+    ex:image "images/visakhapatnam.jpg" .
+
+ex:BorraCaves
+    rdf:type ex:NatureCity ;
+    ex:label "Borra Caves" ;
+    ex:hasAttraction "Stalactites", "Underground Formations" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1 day" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "4.2"^^xsd:decimal ;
+    ex:image "images/borra.jpg" .
+
+ex:Rayalseema
+    rdf:type ex:HistoricalCity ;
+    ex:label "Lepakshi" ;
+    ex:hasAttraction "Veerabhadra Temple", "Hampi-style Architecture" ;
+    ex:bestSeason "Summer" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/lepakshi.jpg" .
+
+# Monsoon (Andhra Pradesh)
+ex:Bheemunipatnam
+    rdf:type ex:BeachCity ;
+    ex:label "Bheemunipatnam" ;
+    ex:hasAttraction "Old Beach", "Historical Forts" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1 day" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "3.9"^^xsd:decimal ;
+    ex:image "images/bheemunipatnam.jpg" .
+
+ex:Srikalahasti
+    rdf:type ex:SpiritualCity ;
+    ex:label "Srikalahasti" ;
+    ex:hasAttraction "Srikalahasti Temple", "Pilgrimage" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "4.0"^^xsd:decimal ;
+    ex:image "images/srikalahasti.jpg" .
+
+ex:Pulicat
+    rdf:type ex:NatureCity ;
+    ex:label "Pulicat Lake" ;
+    ex:hasAttraction "Bird Sanctuary", "Backwaters" ;
+    ex:bestSeason "Monsoon" ;
+    ex:budget "Low" ;
+    ex:duration "1-2 days" ;
+    ex:state "Andhra Pradesh" ;
+    ex:rating "4.1"^^xsd:decimal ;
+    ex:image "images/pulicat.jpg" .

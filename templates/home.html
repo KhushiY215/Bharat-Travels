@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tourism Recommender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Background with image + dark overlay */
+        body {
+            margin: 0;
+            background: url("{{ url_for('static', filename='images/india.jpg') }}") no-repeat center center/cover;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 10px;
+            position: relative;
+        }
+    
+        /* Dark overlay to improve contrast */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+           
+            z-index: 1;
+        }
+    
+        /* Glass Card stays above overlay */
+        .glass-card {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 550px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(18px); /* stronger blur effect */
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.22);
+            border-radius: 18px;
+            padding: 35px;
+            animation: fadeUp 1.2s ease;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        /* Inputs */
+        .form-select, .form-control {
+            background: rgba(255, 255, 255, 0.12);
+            color: black;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+        }
+        .form-select:focus, .form-control:focus {
+            border-color: #00d9ff;
+            box-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
+        }
+
+        /* Button */
+        .btn-main {
+            background: #00d9ff;
+            border: none;
+            padding: 12px 28px;
+            font-weight: 700;
+            border-radius: 30px;
+            width: 100%;
+            transition: 0.25s;
+        }
+        .btn-main:hover {
+            transform: scale(1.05);
+            background: #00b6d9;
+        }
+
+        nav {
+            display: none; /* navbar removed to avoid boxed feel */
+        }
+    </style>
+</head>
+<body>
+
+<div class="glass-card shadow-lg">
+    <h4 class="title">Find Your Next Travel Destination</h4>
+
+    <form method="POST" action="{{ url_for('recommend') }}">
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label class="form-label">Category</label>
+                <select class="form-select" name="category">
+                    {% for c in categories %}
+                        <option value="{{ c }}">{{ c }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Budget</label>
+                <select class="form-select" name="budget">
+                    {% for b in budgets %}
+                        <option value="{{ b }}">{{ b }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Best Season</label>
+                <select class="form-select" name="season">
+                    <option value="Any">Any</option>
+                    <option value="Winter">Winter</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Monsoon">Monsoon</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label class="form-label">State</label>
+                <select class="form-select" name="state">
+                    {% for s in states %}
+                        <option value="{{ s }}">{{ s }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Duration</label>
+                <select class="form-select" name="duration">
+                    {% for d in durations %}
+                        <option value="{{ d }}">{{ d }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Minimum Rating</label>
+                <input type="number" step="0.1" min="0" max="5" class="form-control" name="rating" placeholder="e.g. 4.0">
+            </div>
+        </div>
+
+        <button class="btn-main mt-2">Search Recommendations</button>
+    </form>
+</div>
+
+</body>
+</html>
